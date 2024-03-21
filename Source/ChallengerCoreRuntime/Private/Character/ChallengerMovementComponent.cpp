@@ -22,21 +22,35 @@ void UChallengerMovementComponent::PerformLineTrace(FHitResult& HitResult)
 
     if (GetWorld()->SweepSingleByChannel(HitResult, StartLocation, StartLocation, FQuat::Identity, CoverCollisionChannel, FCollisionShape::MakeSphere(CoverSphereRadius), TraceParams))
     {
+        
         bCoverSphereTrace = true;
+
         ECollisionResponse DefaultResponseLeft = HitResult.GetComponent()->GetCollisionResponseToChannel(CoverLeftCollisionChannel);
         ECollisionResponse DefaultResponseRight = HitResult.GetComponent()->GetCollisionResponseToChannel(CoverRightCollisionChannel);
 
         if (DefaultResponseLeft != ECR_Ignore)
         {
             CoverType = FLyraCardinalDirection::Left;
+            if (bCoverSphereTraceDebug)
+            {
+                DrawDebugSphere(GetWorld(), StartLocation, CoverSphereRadius, 12, FColor::Blue, false, -1.0f);
+            }
         }
         else if (DefaultResponseRight != ECR_Ignore)
         {
             CoverType = FLyraCardinalDirection::Right;
+            if (bCoverSphereTraceDebug)
+            {
+                DrawDebugSphere(GetWorld(), StartLocation, CoverSphereRadius, 12, FColor::Emerald, false, -1.0f);
+            }
         }
         else
         {
             CoverType = FLyraCardinalDirection::Default;
+            if (bCoverSphereTraceDebug)
+            {
+                DrawDebugSphere(GetWorld(), StartLocation, CoverSphereRadius, 12, FColor::Magenta, false, -1.0f);
+            }
         }
     }
     else

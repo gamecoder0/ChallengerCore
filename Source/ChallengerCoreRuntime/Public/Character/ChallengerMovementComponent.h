@@ -70,8 +70,8 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly, category = "CoverDetected")
 	bool bCoverSphereTrace;
-	UPROPERTY(BlueprintReadOnly, category = "CoverDetected")
-	bool bCoverSphereTraceDebug;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, category = "CoverDetected")
+	bool bCoverSphereTraceDebug = false;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, category = "CoverDetected")
 	float CoverSphereRadius = 40.0f;
 	UPROPERTY(BlueprintReadOnly, category = "CoverDetected")
