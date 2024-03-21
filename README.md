@@ -1,0 +1,3 @@
+# Challenger Core Plugin
+
+## Overview
