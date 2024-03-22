@@ -12,6 +12,8 @@ To mitigate this issue, the Challenger Core includes an additional tool: a build
 
 ## Installation
 
+### ⚠️ **Important Note: This plugin is a conceptual tool and is not yet ready for use in professional environments. ⚠️**
+
 To use the plugin, the first step is to obtain a version of the LyraProject from the Unreal Engine 5.3 Marketplace. Before generating the files in the Visual Studio IDE, it is necessary to clone this repository at the following path: `LyraStarterGame\Plugins\GameFeatures`.
 
 To use the construction tool, you need to open the `DefaultEngine.ini` file, which is usually located at the following path within the Lyra project: `LyraStarterGame\Config\DefaultEngine.ini`.
@@ -34,4 +36,4 @@ After these steps, generating the `.sln` file should proceed normally.
 
 ## Using the tools
 
-After installation, you can navigate to `ChallengerCore\Content\Map` and open the level `L_FinalBuilding` to see the functionality. If you wish to use the tools to create a building, you should go to `ChallengerCore\Content\Editor\BuildingGenerator` and left-click on the file `WU_HUD_RUN`. It will open a utility HUD where you can access a simple API explaining the data flow and the functionality of each button on the panel.
+After installation, you can navigate to `ChallengerCore\Content\Map` and open the level `L_FinalBuilding` to see the functionality. If you wish to use the tools to create a building, you should go to `ChallengerCore\Content\Editor\BuildingGenerator` and left-click on the file `WU_HUD_RUN` and run. It will open a utility HUD where you can access a simple API explaining the data flow and the functionality of each button on the panel.
