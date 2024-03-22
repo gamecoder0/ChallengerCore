@@ -12,7 +12,7 @@ To mitigate this issue, the Challenger Core includes an additional tool: a build
 
 ## Installation
 
-### ⚠️ **Important Note: This plugin is a conceptual tool and is not yet ready for use in professional environments. ⚠️**
+#### **Important Note: This plugin is a conceptual tool and is not yet ready for use in professional environments.**
 
 To use the plugin, the first step is to obtain a version of the LyraProject from the Unreal Engine 5.3 Marketplace. Before generating the files in the Visual Studio IDE, it is necessary to clone this repository at the following path: `LyraStarterGame\Plugins\GameFeatures`.
 
